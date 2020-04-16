@@ -1,14 +1,15 @@
-<button>
-  {{ label }}
-</button>
+
+<template>
+  <button>{{ label }}</button>
+</template>
 
 <script>
 export default {
-  name: 'Button',
+  name: "Button",
   props: {
     label: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
