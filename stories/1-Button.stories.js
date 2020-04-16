@@ -1,20 +1,22 @@
-import { withDesign } from 'storybook-addon-designs'
-import { Button } from '../src/components/Button'
+import { withDesign } from "storybook-addon-designs";
+import Button from "../src/components/Button";
 
 export default {
-  title: 'My stories',
-  component: Button,
-  decorators: [withDesign]
-}
+  title: "My Stories",
+  decorators: [withDesign],
+};
 
-export const myStory = () => <Button>Hello, World!</Button>
+export const myStory = () => ({
+  components: { Button },
+  template: "<Button> Hello, World!</Button >",
+});
 
 myStory.story = {
-  name: 'My awesome story',
+  name: "My awesome story",
   parameters: {
     design: {
-      type: 'figma',
-      url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'
-    }
-  }
-}
+      type: "figma",
+      url: "https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File",
+    },
+  },
+};
