@@ -1,18 +1,18 @@
-import { action } from '@storybook/addon-actions';
+import { action } from "@storybook/addon-actions";
 
-import Button from '../src/components/Button';
+import ButtonComponent from "../src/components/Button";
 
 export default {
-  title: 'Button',
-  component: Button,
+  title: "Button",
+  component: ButtonComponent,
 };
 
 export const ButtonDefault = () => ({
-  components: { Button },
+  components: { ButtonComponent },
   data: function () {
     return {
-      label: 'not updated'
-    }
+      label: "not updated",
+    };
   },
-  template: '<button>{{label}}</button>',
+  template: "<Button>{{label}}</Button>",
 });
