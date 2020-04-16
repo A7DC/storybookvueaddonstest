@@ -1,26 +1,20 @@
-import PageTitle from '../src/components/PageTitle';
+import { withDesign } from 'storybook-addon-designs'
+import {Button} from '../src/components/Button'
 
 export default {
-  title: 'PageTitle',
-  component: PageTitle,
-};
+  title: 'My stories',
+  component: Button,
+  decorators: [withDesign]
+}
 
-export const PageTitleDefault = () => ({
-  components: { PageTitle },
-  data: function () {
-    return {
-      title: 'title'
-    }
-  },
-  template: '<PageTitle :title="title" />',
-});
+export const myStory = () => <Button>Hello, World!</Button>
 
-export const PageTitleWithIcon = () => ({
-  components: { PageTitle },
-  data: function () {
-    return {
-      title: 'title'
+myStory.story = {
+  name: 'My awesome story',
+  parameters: {
+    design: {
+      type: 'figma',
+      url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File'
     }
-  },
-  template: '<PageTitle :title="title" icon="true" />',
-});
+  }
+}
